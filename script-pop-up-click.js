@@ -56,7 +56,16 @@ function start() {
     }
 
     document.querySelector(".pop-up-close-button").addEventListener("click", () => popUpDishContainer.style.display = "none");
+    popUpDishContainer.addEventListener("click", () => popUpClick(this));
 
+    function popUpClick(event) {
+        console.log(event);
+        if (event.classList.contains("pop-up-dish-container")) {
+            popUpDishContainer.style.display = "none";
+        } else {
+            event.stopPropagation();
+        }
+    }
 
     function addEventlistenersToButtons() {
         document.querySelectorAll(".filter").forEach(button => {
