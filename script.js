@@ -30,7 +30,7 @@ function start() {
                 console.log(dish);
                 let templateClone = dishTemplate.cloneNode(true).content;
 
-                //            templateClone.querySelector(".dish-image").src = `/img/small/${dish.gsx$billede.$t}-sm.jpg`;
+                templateClone.querySelector(".dish-image").src = `/img/small/${dish.gsx$billede.$t}-sm.jpg`;
                 templateClone.querySelector(".dish-name").textContent = dish.gsx$navn.$t;
                 templateClone.querySelector(".dish-description").textContent = dish.gsx$kort.$t;
                 templateClone.querySelector(".dish-price").textContent += `${dish.gsx$pris.$t} kr`;
