@@ -16,6 +16,14 @@ img {
     display: block;
 }
 
+/* Splash */
+#splash {
+    background-image: url(img/splash.jpg);
+    object-fit: cover;
+    width: 100vw;
+    height: 10vw;
+    background-position: 0% 60%;
+}
 
 /* Template style */
 .data-container {
