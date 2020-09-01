@@ -29,10 +29,18 @@ function start() {
         json.feed.entry.forEach(dish => {
             if (filter == "all" || filter == dish.gsx$kategori.$t) {
                 console.log(dish);
+
+                let string = dish.gsx$kategori.$t;
+                let stringFirstLetter = string.charAt(0).toUpperCase();
+                string = stringFirstLetter + string.slice(1);
+
                 let templateClone = dishTemplate.cloneNode(true).content;
 
                 templateClone.querySelector(".dish-image").src = `/img/small/${dish.gsx$billede.$t}-sm.jpg`;
                 templateClone.querySelector(".dish-name").textContent = `Nr. ${dish.gsx$id.$t} ${dish.gsx$navn.$t}`;
+
+                templateClone.querySelector(".dish-category").textContent = string;
+
                 templateClone.querySelector(".dish-description").textContent = dish.gsx$kort.$t;
                 templateClone.querySelector(".dish-price").textContent += `${dish.gsx$pris.$t} kr`;
 
@@ -44,8 +52,12 @@ function start() {
     }
 
     function showPopUp(dish) {
+        let string = dish.gsx$kategori.$t;
+        let stringFirstLetter = string.charAt(0).toUpperCase();
+        string = stringFirstLetter + string.slice(1);
+
         popUpDishContainer.querySelector(".pop-up-dish-name").textContent = `Nr. ${dish.gsx$id.$t} ${dish.gsx$navn.$t}`;
-        popUpDishContainer.querySelector(".pop-up-dish-category").textContent = dish.gsx$kategori.$t;
+        popUpDishContainer.querySelector(".pop-up-dish-category").textContent = string;
         popUpDishContainer.querySelector(".pop-up-dish-image").src = `/img/large/${dish.gsx$billede.$t}.jpg`;
         popUpDishContainer.querySelector(".pop-up-dish-image").alt = dish.gsx$navn.$t;
         popUpDishContainer.querySelector(".pop-up-dish-description").textContent = dish.gsx$lang.$t;
