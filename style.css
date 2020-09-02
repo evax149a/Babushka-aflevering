@@ -33,11 +33,78 @@ img {
     bottom: 0;
 }
 
+/* Sub-headline-header-wrapper, sub-headline */
+.sub-headline-header-wrapper-background {
+    background-color: #fcf6ef;
+    /*    width: 100vw;*/
+}
+
+.sub-headline-header-wrapper {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 30px 50px;
+}
+
+.sub-headline {
+    font-size: 3vw;
+
+}
+
+/* Udvælgelsesknapper */
+.header-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+header {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 7px 50px;
+}
+
+.header-wrapper-p .filter {
+    /*    width: 100%;*/
+    font-size: 3.2vw;
+}
+
+@media (min-width: 600px) {
+    header {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .filter {
+        /*    width: 100%;*/
+        font-size: 1.7vw;
+    }
+}
+
+@media (min-width: 900px) {
+
+    .filter {
+        /*    width: 100%;*/
+        font-size: 1.2vw;
+    }
+
+    .header-wrapper-p {
+        font-size: 1.2vw;
+    }
+}
+
 /* Template style */
 .data-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 300px);
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     grid-gap: 50px;
+    justify-content: center;
     padding: 50px;
 
     max-width: 1200px;
