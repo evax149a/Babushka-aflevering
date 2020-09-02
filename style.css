@@ -21,14 +21,14 @@ img {
     background-image: url(img/splash2_copy2.jpg);
     object-fit: contain;
     width: 100vw;
-    height: 20vw;
+    height: 60vw;
     background-position: 0% 63%;
     position: relative;
 }
 
 .headline {
     color: aliceblue;
-    font-size: 9vw;
+    font-size: 16vw;
     position: absolute;
     bottom: 0;
 }
@@ -71,12 +71,27 @@ header {
     padding: 7px 50px;
 }
 
+.filter {
+    border-radius: 3px;
+    border: 1px solid grey;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.04), 0px 0px 2px rgba(0, 0, 0, 0.03);
+}
+
 .header-wrapper-p .filter {
     /*    width: 100%;*/
     font-size: 3.2vw;
 }
 
 @media (min-width: 600px) {
+    #splash {
+        height: 40vw;
+        background-position: 0% 63%;
+    }
+
+    .headline {
+        font-size: 11vw;
+    }
+
     header {
         grid-template-columns: repeat(6, 1fr);
     }
@@ -85,9 +100,18 @@ header {
         /*    width: 100%;*/
         font-size: 1.7vw;
     }
+
 }
 
 @media (min-width: 900px) {
+    #splash {
+        height: 30vw;
+        background-position: 0% 63%;
+    }
+
+    .headline {
+        font-size: 9vw;
+    }
 
     .filter {
         /*    width: 100%;*/
@@ -97,6 +121,7 @@ header {
     .header-wrapper-p {
         font-size: 1.2vw;
     }
+
 }
 
 /* Template style */
