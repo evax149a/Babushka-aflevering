@@ -55,6 +55,7 @@ img {
 
 body {
     background-color: var(--body-color);
+    overflow-x: hidden;
 }
 
 /* Splash */
@@ -220,6 +221,29 @@ header {
     width: 280px;
 }
 
+.dish:hover {
+    background-image: var(--dish-color-hover);
+}
+
+.dish-image {
+    border-radius: 6px 6px 0 0;
+}
+
+.dish-text-padding {
+    padding: 7px;
+}
+
+.dish-category,
+.pop-up-dish-category {
+    padding: 5px 0 0 0;
+    font-style: italic;
+}
+
+.dish-price {
+    padding: 10px 0 0 0;
+    font-weight: 800;
+}
+
 @media (min-width: 400px) {
     .dish {
         width: 380px;
@@ -249,29 +273,6 @@ header {
     }
 }
 
-.dish:hover {
-    background-image: var(--dish-color-hover);
-}
-
-.dish-image {
-    border-radius: 6px 6px 0 0;
-}
-
-.dish-text-padding {
-    padding: 7px;
-}
-
-.dish-category,
-.pop-up-dish-category {
-    padding: 5px 0 0 0;
-    font-style: italic;
-}
-
-.dish-price {
-    padding: 10px 0 0 0;
-    font-weight: 800;
-}
-
 /* Pop up style */
 .pop-up-dish-container {
     position: fixed;
@@ -281,6 +282,7 @@ header {
     height: 100vh;
     background-color: var(--pop-up-dish-container-color);
     display: none;
+    overflow-x: hidden;
 }
 
 .pop-up-dish {
@@ -288,7 +290,9 @@ header {
     height: 70vh;
     margin: 4rem auto;
     background-color: var(--pop-up-dish-color);
-    overflow-y: scroll;
+    overflow-y: hidden;
+    /*    overflow-y: scroll;*/
+    /*    overflow-x: scroll;*/
     overflow-x: hidden;
     position: relative;
 
@@ -311,6 +315,10 @@ header {
     background-color: var(--button-background-color);
     padding: 5px;
     transition-duration: 0.4s;
+}
+
+.pop-up-close-button:hover {
+    background-image: var(--button-background-color-hover);
 }
 
 .pop-up-dish-category {
@@ -337,6 +345,34 @@ header {
 .pop-up-dish-price {
     padding: 10px 0 0 0;
     font-weight: 800;
+}
+
+@media (min-width: 400px) {
+    .pop-up-dish {
+        height: 110vw;
+    }
+}
+
+@media (min-width: 600px) {
+    .pop-up-dish {
+        height: 90vw;
+    }
+}
+
+@media (min-width: 700px) {
+
+    .pop-up-dish,
+    .pop-up-dish-image {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 900px) {
+    .pop-up-dish {
+        height: 80vh;
+        top: 10vh;
+    }
 }
 
 /* Footer */
