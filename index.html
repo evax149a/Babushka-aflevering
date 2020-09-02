@@ -16,19 +16,21 @@
 
     <div class="sub-headline-header-wrapper-background">
         <div class="sub-headline-header-wrapper">
-            <h2 class="sub-headline">Menu: <span class="sub-headline-dish-category">Alle retter</span></h2>
-            <div class="header-wrapper">
-                <p class="header-wrapper-p">Filtrer efter:</p>
-                <header>
-                    <button class="filter" data-kategori="all">Hele menukortet</button>
-                    <button class="filter" data-kategori="forretter">Forretter</button>
-                    <button class="filter" data-kategori="hovedretter">Hovedretter</button>
-                    <button class="filter" data-kategori="desserter">Desserter</button>
-                    <button class="filter" data-kategori="sideorders">Tilbehør</button>
-                    <button class="filter" data-kategori="drikkevarer">Drikkevarer</button>
-                </header>
-            </div>
+            <h2 class="sub-headline">Menu <span class="sub-headline-dish-category">Alle retter</span></h2>
+
         </div>
+    </div>
+
+    <div class="header-wrapper-buttons-p">
+        <p class="header-wrapper-p">FILTRER EFTER</p>
+        <header>
+            <button class="filter" data-kategori="all">Hele menukortet</button>
+            <button class="filter" data-kategori="forretter">Forretter</button>
+            <button class="filter" data-kategori="hovedretter">Hovedretter</button>
+            <button class="filter" data-kategori="desserter">Desserter</button>
+            <button class="filter" data-kategori="sideorders">Tilbehør</button>
+            <button class="filter" data-kategori="drikkevarer">Drikkevarer</button>
+        </header>
     </div>
 
     <section class="data-container"></section>
@@ -36,10 +38,12 @@
     <template>
         <article class="dish">
             <img class="dish-image" src="" alt="">
-            <h3 class="dish-name"></h3>
-            <p class="dish-category"></p>
-            <p class="dish-description"></p>
-            <p class="dish-price">Pris: </p>
+            <div class="dish-text-padding">
+                <h3 class="dish-name"></h3>
+                <p class="dish-category"></p>
+                <p class="dish-description"></p>
+                <p class="dish-price">Pris: </p>
+            </div>
         </article>
     </template>
 
