@@ -61,7 +61,7 @@ function start() {
         popUpDishContainer.querySelector(".pop-up-dish-image").src = `/img/large/${dish.gsx$billede.$t}.jpg`;
         popUpDishContainer.querySelector(".pop-up-dish-image").alt = dish.gsx$navn.$t;
         popUpDishContainer.querySelector(".pop-up-dish-description").textContent = dish.gsx$lang.$t;
-        popUpDishContainer.querySelector(".pop-up-dish-price").textContent = `Pris: ${dish.gsx$pris.$t}`;
+        popUpDishContainer.querySelector(".pop-up-dish-price").textContent = `Pris: ${dish.gsx$pris.$t} kr`;
         popUpDishContainer.querySelector(".pop-up-dish-origin").textContent = `Oprindelse: ${dish.gsx$oprindelse.$t}`;
 
         popUpDishContainer.style.display = "block";
