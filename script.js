@@ -36,7 +36,8 @@ function start() {
 
                 let templateClone = dishTemplate.cloneNode(true).content;
 
-                templateClone.querySelector(".dish-image").src = `/img/small/${dish.gsx$billede.$t}-sm.jpg`;
+                templateClone.querySelector(".dish-image").src = `http://evakjar.dk/kea/07_dynamisk_web/07_dynamisk_web-babushka/img/small/${dish.gsx$billede.$t}-sm.jpg`;
+                //                templateClone.querySelector(".dish-image").src = `/img/small/${dish.gsx$billede.$t}-sm.jpg`;
                 templateClone.querySelector(".dish-name").textContent = `Nr. ${dish.gsx$id.$t} ${dish.gsx$navn.$t}`;
 
                 templateClone.querySelector(".dish-category").textContent = string;
@@ -58,7 +59,7 @@ function start() {
 
         popUpDishContainer.querySelector(".pop-up-dish-name").textContent = `Nr. ${dish.gsx$id.$t} ${dish.gsx$navn.$t}`;
         popUpDishContainer.querySelector(".pop-up-dish-category").textContent = string;
-        popUpDishContainer.querySelector(".pop-up-dish-image").src = `/img/large/${dish.gsx$billede.$t}.jpg`;
+        popUpDishContainer.querySelector(".pop-up-dish-image").src = `http://evakjar.dk/kea/07_dynamisk_web/07_dynamisk_web-babushka/img/large/${dish.gsx$billede.$t}.jpg`;
         popUpDishContainer.querySelector(".pop-up-dish-image").alt = dish.gsx$navn.$t;
         popUpDishContainer.querySelector(".pop-up-dish-description").textContent = dish.gsx$lang.$t;
         popUpDishContainer.querySelector(".pop-up-dish-price").textContent = `Pris: ${dish.gsx$pris.$t} kr`;
